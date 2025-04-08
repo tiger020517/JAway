@@ -1,10 +1,8 @@
 import java.util.Scanner;
 
-public class Rep4GuessingCode2 {
+public class Rep4GuessingCode1 {
 	public static void main(String[] args) {
 		String guess;
-		String answer = "53840";
-		int[] out = new int[] {0, 0};
 		Scanner input = new Scanner(System.in);
 		int	flag = 5;
 
@@ -24,12 +22,6 @@ public class Rep4GuessingCode2 {
 				flag = 5;
 			}
 		} while (flag > 0);
-		for (int i = 0; i < 5; i++) {
-			if (guess.charAt(i) == answer.charAt(i)) {
-				out[0] += 1;
-				out[1] += Integer.parseInt(guess.substring(i, i + 1));
-			}
-		}
-		System.out.println("추측 결과: 일치하는 자리 수 = " + out[0] +", 합 = " + out[1]);
+		System.out.println("입력한 숫자: " + guess);
 	}
 }
